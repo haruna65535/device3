@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8" />
+
+<script>
+
+function $(id) { return document.getElementById(id); }
+
+function init(){
+	//ユーザーエージェント文字列を取得
+	var userAgent = navigator.userAgent;
+
+	$('output').innerHTML = userAgent;
+
+
+	//StringオブジェクトのindexOfメソッドを使って機種判別
+	//iPod touchの場合も「iPhone OS」という文字列が含まれる
+	//ので、先に「iPod」で検索
+	if (userAgent.indexOf('iPod') > 0){
+	  alert("iPod touchです");
+	}else if(userAgent.indexOf('iPad') > 0){
+	  alert("iPadです");
+	}else if(userAgent.indexOf('iPhone') > 0){
+	  alert("iPhoneです");
+	}else if(userAgent.indexOf('Android') > 0) {
+	  alert("Androidです");
+	}else{
+	  alert("そのほかの端末です");
+	}
+}
+</script>
+
+</head>
+<body onload="init();">
+<div id="output"></div>
+
+</body></html>
