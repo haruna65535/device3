@@ -4,7 +4,7 @@
     id        = "com.phonegap.example.device"
     version   = "1.0.0">
 
-<name>はじめてのPhoneGap</name>
+<name>PhoneGapDeviceTest3</name>
 
 <description>
 はじめてのPhoneGap用サンプルアプリ
